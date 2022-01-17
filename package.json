@@ -1,0 +1,29 @@
+{
+  "name": "@datastructures-js/deque",
+  "version": "0.0.0",
+  "description": "a performant deque implementation in javascript",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "grunt test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/datastructures-js/deque.git"
+  },
+  "keywords": [
+    "deque",
+    "deque",
+    "es6",
+    "deque",
+    "js"
+  ],
+  "author": "Eyas Ranjous <eyas.ranjous@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/datastructures-js/deque/issues"
+  },
+  "homepage": "https://github.com/datastructures-js/deque#readme"
+}
