@@ -62,10 +62,10 @@ const deque = new Deque([1, 2, 3]);
 ##### TS
 ```js
 // empty queue
-const queue = new Deque<number>();
+const deque = new Deque<number>();
 
 // from an array
-const queue = new Deque<number>([1, 2, 3]);
+const deque = new Deque<number>([1, 2, 3]);
 ```
 
 ### Deque.fromArray(elements)
@@ -73,14 +73,14 @@ const queue = new Deque<number>([1, 2, 3]);
 ##### JS
 ```js
 // empty queue
-const queue = Deque.fromArray([]);
+const deque = Deque.fromArray([]);
 
 // with elements
 const list = [10, 3, 8, 40, 1];
-const queue = Deque.fromArray(list);
+const deque = Deque.fromArray(list);
 
 // If the list should not be mutated, use a copy of it.
-const queue = Deque.fromArray(list.slice());
+const deque = Deque.fromArray(list.slice());
 ```
 
 ##### TS
