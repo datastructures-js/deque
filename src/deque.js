@@ -98,9 +98,15 @@ class Deque {
    * @returns {any}
    */
   back() {
-    return this.size() > 0
-      ? this._backElements[this._backElements.length - 1]
-      : null;
+    if (this.size() === 0) {
+      return null;
+    }
+
+    if (this._backElements.length > 0) {
+      return this._backElements[this._backElements.length - 1];
+    }
+
+    return this._frontElements[0];
   }
 
   /**
