@@ -94,6 +94,46 @@ const list = [10, 3, 8, 40, 1];
 const queue = Deque.fromArray<number>(list);
 ```
 
+### .pushFront(element)
+adds an element at the front of the queue.
+
+<table>
+  <tr>
+    <th align="center">params</th>
+    <th align="center">return</th>
+    <th align="center">runtime</th>
+  </tr>
+  <tr>
+    <td align="center">element: T</td>
+    <td align="center">Deque&lt;T&gt;</td>
+    <td align="center">O(1)</td>
+  </tr>
+</table>
+
+```js
+queue.pushFront(20).pushFront(10);
+```
+
+### .pushFront(element)
+adds an element at the back of the queue.
+
+<table>
+  <tr>
+    <th align="center">params</th>
+    <th align="center">return</th>
+    <th align="center">runtime</th>
+  </tr>
+  <tr>
+    <td align="center">element: T</td>
+    <td align="center">Deque&lt;T&gt;</td>
+    <td align="center">O(1)</td>
+  </tr>
+</table>
+
+```js
+queue.pushBack(30).pushFront(40);
+```
+
 ### .front()
 peeks on the front element of the queue.
 
@@ -113,7 +153,7 @@ console.log(queue.front()); // 10
 ```
 
 ### .back()
-peeks on the back element in the queue.
+peeks on the back element of the queue.
 
 <table>
   <tr>
@@ -127,9 +167,8 @@ peeks on the back element in the queue.
 </table>
 
 ```js
-console.log(queue.back()); // 20
+console.log(queue.back()); // 40
 ```
-
 
 ### .isEmpty()
 checks if the queue is empty.
