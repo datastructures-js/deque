@@ -177,7 +177,7 @@ class Deque {
   /**
    * Creates a shallow copy of the queue
    * @public
-   * @return {Queue}
+   * @return {Deque}
    */
   clone() {
     return new Deque(this.toArray());
@@ -188,7 +188,7 @@ class Deque {
    * @public
    * @static
    * @param {array} elements
-   * @return {Queue}
+   * @return {Deque}
    */
   static fromArray(elements) {
     return new Deque(elements);
