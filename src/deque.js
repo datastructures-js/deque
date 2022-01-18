@@ -3,6 +3,7 @@
  * @copyright 2022 Eyas Ranjous <eyas.ranjous@gmail.com>
  *
  * @class
+ * double-ended queue
  */
 class Deque {
   /**
