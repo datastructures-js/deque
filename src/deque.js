@@ -6,7 +6,7 @@
  */
 class Deque {
   /**
-   * Creates a deque.
+   * Creates a deque
    * @param {array} [elements]
    */
   constructor(elements) {
@@ -16,7 +16,7 @@ class Deque {
   }
 
   /**
-   * Adds an element at the front of the queue.
+   * Adds an element at the front of the queue
    * @public
    * @param {any} element
    */
@@ -26,7 +26,7 @@ class Deque {
   }
 
   /**
-   * Adds an element at the back of the queue.
+   * Adds an element at the back of the queue
    * @public
    * @param {any} element
    */
@@ -36,7 +36,7 @@ class Deque {
   }
 
   /**
-   * Dequeues the front element in the queue.
+   * Dequeues the front element in the queue
    * @public
    * @returns {any}
    */
@@ -62,7 +62,7 @@ class Deque {
   }
 
   /**
-   * Dequeues the front element in the queue.
+   * Dequeues the back element of the queue
    * @public
    * @returns {any}
    */
@@ -75,7 +75,7 @@ class Deque {
   }
 
   /**
-   * Returns the front element of the queue.
+   * Returns the front element of the queue
    * @public
    * @returns {any}
    */
@@ -92,7 +92,7 @@ class Deque {
   }
 
   /**
-   * Returns the back element of the queue.
+   * Returns the back element of the queue
    * @public
    * @returns {any}
    */
@@ -103,7 +103,7 @@ class Deque {
   }
 
   /**
-   * Returns the number of elements in the deque.
+   * Returns the number of elements in the deque
    * @public
    * @returns {number}
    */
@@ -117,7 +117,7 @@ class Deque {
   }
 
   /**
-   * Checks if the queue is empty.
+   * Checks if the queue is empty
    * @public
    * @returns {boolean}
    */
@@ -126,7 +126,7 @@ class Deque {
   }
 
   /**
-   * Returns the remaining elements in the queue as an array.
+   * Returns the remaining elements in the queue as an array
    * @public
    * @returns {array}
    */
@@ -136,7 +136,7 @@ class Deque {
   }
 
   /**
-   * Clears the queue.
+   * Clears the queue
    * @public
    */
   clear() {
@@ -146,7 +146,7 @@ class Deque {
   }
 
   /**
-   * Creates a shallow copy of the queue.
+   * Creates a shallow copy of the queue
    * @public
    * @return {Queue}
    */
@@ -155,7 +155,7 @@ class Deque {
   }
 
   /**
-   * Creates a queue from an existing array.
+   * Creates a deque from an existing array
    * @public
    * @static
    * @param {array} elements
