@@ -69,6 +69,7 @@ class Deque {
   popBack() {
     const back = this._backElements.pop() || null;
     if (this._backOffset >= this._backElements.length) {
+      this._backElements = this._backElements.slice(this._backOffset);
       this._backOffset = 0;
     }
     return back;
