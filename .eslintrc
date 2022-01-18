@@ -1,0 +1,17 @@
+{
+  "rules": {
+    "max-len": ["error", { "code": 80, "ignoreComments": true }],
+    "comma-dangle": ["error", {
+      "functions": "ignore"
+    }],
+    "no-underscore-dangle": [
+      "error",
+      { "allowAfterThis": true }
+    ]
+  },
+  "env": {
+    "mocha": true,
+    "node": true
+  },
+  "extends": ["airbnb-base"]
+}
