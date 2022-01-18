@@ -113,6 +113,8 @@ describe('Deque unit tests', () => {
       deque.clear();
       expect(deque.popFront()).to.be.equal(null);
       expect(deque.popBack()).to.be.equal(null);
+      expect(deque.front()).to.be.equal(null);
+      expect(deque.back()).to.be.equal(null);
       expect(deque.size()).to.be.equal(0);
       expect(deque.isEmpty()).to.be.equal(true);
     });
