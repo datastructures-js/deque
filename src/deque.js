@@ -13,6 +13,7 @@ class Deque {
     this._backElements = Array.isArray(elements) ? elements : [];
     this._frontElements = [];
     this._backOffset = 0;
+    this._frontOffset = 0;
   }
 
   /**
@@ -46,7 +47,12 @@ class Deque {
     }
 
     if (this._frontElements.length > 0) {
-      return this._frontElements.pop();
+      const front = this._frontElements.pop();
+      if (this._frontOffset >= this._frontElements.length) {
+        this._frontElements = this._frontElements.slice(this._frontOffset);
+        this._frontOffset = 0;
+      }
+      return front;
     }
 
     const front = this.front();
@@ -67,11 +73,27 @@ class Deque {
    * @returns {any}
    */
   popBack() {
-    const back = this._backElements.pop() || null;
-    if (this._backOffset >= this._backElements.length) {
-      this._backElements = this._backElements.slice(this._backOffset);
-      this._backOffset = 0;
+    if (this.size() === 0) {
+      return null;
     }
+
+    if (this._backElements.length > 0) {
+      const back = this._backElements.pop();
+      if (this._backOffset >= this._backElements.length) {
+        this._backElements = this._backElements.slice(this._backOffset);
+        this._backOffset = 0;
+      }
+      return back;
+    }
+
+    const back = this.back();
+    this._frontOffset += 1;
+    if (this._frontOffset * 2 < this._frontElements.length) {
+      return back;
+    }
+
+    this._frontElements = this._frontElements.slice(this._frontOffset);
+    this._frontOffset = 0;
     return back;
   }
 
@@ -106,7 +128,7 @@ class Deque {
       return this._backElements[this._backElements.length - 1];
     }
 
-    return this._frontElements[0];
+    return this._frontElements[this._frontOffset];
   }
 
   /**
@@ -115,12 +137,9 @@ class Deque {
    * @returns {number}
    */
   size() {
-    const size = this._frontElements.length;
-    if (this._backOffset >= this._backElements.length) {
-      return size;
-    }
-
-    return size + (this._backElements.length - this._backOffset);
+    const frontSize = this._frontElements.length - this._frontOffset;
+    const backSize = this._backElements.length - this._backOffset;
+    return frontSize + backSize;
   }
 
   /**
