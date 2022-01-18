@@ -87,11 +87,11 @@ const queue = Deque.fromArray(list.slice());
 ##### TS
 ```js
 // empty queue
-const queue = Deque.fromArray<number>([]);
+const deque = Deque.fromArray<number>([]);
 
 // with elements
 const list = [10, 3, 8, 40, 1];
-const queue = Deque.fromArray<number>(list);
+const deque = Deque.fromArray<number>(list);
 ```
 
 ### .pushFront(element)
@@ -111,7 +111,7 @@ adds an element at the front of the queue.
 </table>
 
 ```js
-queue.pushFront(20).pushFront(10);
+deque.pushFront(30).pushFront(20).pushFront(10);
 ```
 
 ### .pushBack(element)
@@ -131,7 +131,7 @@ adds an element at the back of the queue.
 </table>
 
 ```js
-queue.pushBack(30).pushBack(40);
+deque.pushBack(40).pushBack(50).pushBack(60);
 ```
 
 ### .front()
@@ -149,7 +149,7 @@ peeks on the front element of the queue.
 </table>
 
 ```js
-console.log(queue.front()); // 10
+console.log(deque.front()); // 10
 ```
 
 ### .back()
@@ -167,7 +167,7 @@ peeks on the back element of the queue.
 </table>
 
 ```js
-console.log(queue.back()); // 40
+console.log(deque.back()); // 60
 ```
 
 ### .popFront()
@@ -185,8 +185,8 @@ removes the front element in the queue. It uses a pointer to get the front eleme
 </table>
 
 ```js
-console.log(queue.popFront()); // 10
-console.log(queue.front()); // 20
+console.log(deque.popFront()); // 10
+console.log(deque.front()); // 20
 ```
 
 ### .popBack()
@@ -204,8 +204,8 @@ dequeue the front element in the queue. It uses a pointer to get the back elemen
 </table>
 
 ```js
-console.log(queue.dequeue()); // 10
-console.log(queue.front()); // 20
+console.log(deque.popBack()); // 60
+console.log(deque.back()); // 50
 ```
 
 ### .isEmpty()
@@ -241,7 +241,7 @@ returns the number of elements in the queue.
 </table>
 
 ```js
-console.log(deque.size()); // 1
+console.log(deque.size()); // 4
 ```
 
 ### .clone() 
@@ -259,12 +259,12 @@ creates a shallow copy of the queue.
 </table>
 
 ```js
-const queue = Deque.fromArray([{ id: 2 }, { id: 4 } , { id: 8 }]);
-const clone =  Deque.clone();
+const deque2 = Deque.fromArray([{ id: 2 }, { id: 4 } , { id: 8 }]);
+const clone =  deque2.clone();
 
-clone.dequeue();
+clone.popFront();
 
-console.log(queue.front()); // { id: 2 }
+console.log(deque2.front()); // { id: 2 }
 console.log(clone.front()); // { id: 4 }
 ```
 
@@ -283,8 +283,7 @@ returns a copy of the remaining elements as an array.
 </table>
 
 ```js
-queue.enqueue(4).enqueue(2);
-console.log(queue.toArray()); // [20, 4, 2]
+console.log(deque.toArray()); // [ 20, 30, 40, 50 ]
 ```
 
 ### .clear()
@@ -300,8 +299,8 @@ clears all elements from the queue.
 </table>
 
 ```js
-queue.clear();
-queue.size(); // 0
+deque.clear();
+deque.size(); // 0
 ```
 
 ### Build
