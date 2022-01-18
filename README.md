@@ -189,7 +189,7 @@ console.log(deque.front()); // 20
 ```
 
 ### .popBack()
-dequeue the front element in the queue. It uses a pointer to get the back element and only remove popped elements when reaching half size of the queue.
+removes the back element in the queue. It uses a pointer to get the back element and only remove popped elements when reaching half size of the queue.
 
 <table>
   <tr>
