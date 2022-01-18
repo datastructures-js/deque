@@ -114,7 +114,7 @@ adds an element at the front of the queue.
 queue.pushFront(20).pushFront(10);
 ```
 
-### .pushFront(element)
+### .pushBack(element)
 adds an element at the back of the queue.
 
 <table>
@@ -131,7 +131,7 @@ adds an element at the back of the queue.
 </table>
 
 ```js
-queue.pushBack(30).pushFront(40);
+queue.pushBack(30).pushBack(40);
 ```
 
 ### .front()
