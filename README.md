@@ -4,7 +4,7 @@
 [![npm](https://img.shields.io/npm/v/@datastructures-js/deque.svg)](https://www.npmjs.com/package/@datastructures-js/deque)
 [![npm](https://img.shields.io/npm/dm/@datastructures-js/deque.svg)](https://www.npmjs.com/packages/@datastructures-js/deque) [![npm](https://img.shields.io/badge/node-%3E=%206.0-blue.svg)](https://www.npmjs.com/package/@datastructures-js/deque)
 
-A performant deque implementation in javascript.
+A performant double-ended queue (deque) implementation in javascript.
 
 <img src="https://user-images.githubusercontent.com/6517308/121813242-859a9700-cc6b-11eb-99c0-49e5bb63005b.jpg">
 
