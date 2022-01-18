@@ -170,6 +170,44 @@ peeks on the back element of the queue.
 console.log(queue.back()); // 40
 ```
 
+### .popFront()
+removes the front element in the queue. It uses a pointer to get the front element and only remove popped elements when reaching half size of the queue.
+
+<table>
+  <tr>
+    <th align="center">return</th>
+    <th align="center">runtime</th>
+  </tr>
+  <tr>
+    <td align="center">T</td>
+    <td align="center">O(n*log(n))</td>
+  </tr>
+</table>
+
+```js
+console.log(queue.popFront()); // 10
+console.log(queue.front()); // 20
+```
+
+### .popBack()
+dequeue the front element in the queue. It uses a pointer to get the back element and only remove popped elements when reaching half size of the queue.
+
+<table>
+  <tr>
+    <th align="center">return</th>
+    <th align="center">runtime</th>
+  </tr>
+  <tr>
+    <td align="center">T</td>
+    <td align="center">O(n*log(n))</td>
+  </tr>
+</table>
+
+```js
+console.log(queue.dequeue()); // 10
+console.log(queue.front()); // 20
+```
+
 ### .isEmpty()
 checks if the queue is empty.
 
