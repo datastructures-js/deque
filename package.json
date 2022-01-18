@@ -14,11 +14,11 @@
     "url": "git+https://github.com/datastructures-js/deque.git"
   },
   "keywords": [
+    "double ended queue",
+    "double-ended queue",
     "deque",
-    "deque",
-    "es6",
-    "deque",
-    "js"
+    "deque es6",
+    "deque js"
   ],
   "author": "Eyas Ranjous <eyas.ranjous@gmail.com>",
   "license": "MIT",
