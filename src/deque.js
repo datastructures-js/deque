@@ -1,6 +1,6 @@
 /**
  * @license MIT
- * @copyright 2021 Eyas Ranjous <eyas.ranjous@gmail.com>
+ * @copyright 2022 Eyas Ranjous <eyas.ranjous@gmail.com>
  *
  * @class
  */
