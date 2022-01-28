@@ -1,7 +1,7 @@
 # @datastructures-js/deque
 
 [![npm](https://img.shields.io/npm/v/@datastructures-js/deque.svg)](https://www.npmjs.com/package/@datastructures-js/deque)
-[![npm](https://img.shields.io/npm/dm/@datastructures-js/deque.svg)](https://www.npmjs.com/packages/@datastructures-js/deque) [![npm](https://img.shields.io/badge/node-%3E=%206.0-blue.svg)](https://www.npmjs.com/package/@datastructures-js/deque)
+[![npm](https://img.shields.io/npm/dm/@datastructures-js/deque.svg)](https://www.npmjs.com/package/@datastructures-js/deque) [![npm](https://img.shields.io/badge/node-%3E=%206.0-blue.svg)](https://www.npmjs.com/package/@datastructures-js/deque)
 
 A performant double-ended queue (deque) implementation in javascript.
 
@@ -252,7 +252,7 @@ creates a shallow copy of the queue.
     <th align="center">runtime</th>
   </tr>
   <tr>
-    <td align="center">Queue&lt;T&gt;</td>
+    <td align="center">Deque&lt;T&gt;</td>
     <td align="center">O(n)</td>
   </tr>
 </table>
