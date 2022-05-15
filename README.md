@@ -13,18 +13,18 @@ A performant double-ended queue (deque) implementation in javascript.
 * [import](#import)
 * [API](#api)
   * [constructor](#constructor)
-  * [Deque.fromArray(elements)](#dequefromarrayelements)
-  * [.pushFront(element)](#pushfrontelement)
-  * [.pushBack(element)](#pushbackelement)
-  * [.front()](#front)
-  * [.back()](#back)
-  * [.popFront()](#popfront)
-  * [.popBack()](#popback)
-  * [.isEmpty()](#isEmpty)
-  * [.size()](#size)
-  * [.clone()](#clone)
-  * [.toArray()](#toarray)
-  * [.clear()](#clear)
+  * [Deque.fromArray](#dequefromarray)
+  * [pushFront](#pushfront)
+  * [pushBack](#pushback)
+  * [front](#front)
+  * [back](#back)
+  * [popFront](#popfront)
+  * [popBack](#popback)
+  * [isEmpty](#isEmpty)
+  * [size](#size)
+  * [clone](#clone)
+  * [toArray](#toarray)
+  * [clear](#clear)
 * [Build](#build)
 * [License](#license)
 
@@ -96,38 +96,12 @@ const deque = Deque.fromArray<number>(list);
 ### .pushFront(element)
 adds an element at the front of the queue.
 
-<table>
-  <tr>
-    <th align="center">params</th>
-    <th align="center">return</th>
-    <th align="center">runtime</th>
-  </tr>
-  <tr>
-    <td align="center">element: T</td>
-    <td align="center">Deque&lt;T&gt;</td>
-    <td align="center">O(1)</td>
-  </tr>
-</table>
-
 ```js
 deque.pushFront(30).pushFront(20).pushFront(10);
 ```
 
 ### .pushBack(element)
 adds an element at the back of the queue.
-
-<table>
-  <tr>
-    <th align="center">params</th>
-    <th align="center">return</th>
-    <th align="center">runtime</th>
-  </tr>
-  <tr>
-    <td align="center">element: T</td>
-    <td align="center">Deque&lt;T&gt;</td>
-    <td align="center">O(1)</td>
-  </tr>
-</table>
 
 ```js
 deque.pushBack(40).pushBack(50).pushBack(60);
@@ -136,17 +110,6 @@ deque.pushBack(40).pushBack(50).pushBack(60);
 ### .front()
 peeks on the front element of the queue.
 
-<table>
-  <tr>
-    <th align="center">return</th>
-    <th align="center">runtime</th>
-  </tr>
-  <tr>
-    <td align="center">T</td>
-    <td align="center">O(1)</td>
-  </tr>
-</table>
-
 ```js
 console.log(deque.front()); // 10
 ```
@@ -154,34 +117,12 @@ console.log(deque.front()); // 10
 ### .back()
 peeks on the back element of the queue.
 
-<table>
-  <tr>
-    <th align="center">return</th>
-    <th align="center">runtime</th>
-  </tr>
-  <tr>
-    <td align="center">T</td>
-    <td align="center">O(1)</td>
-  </tr>
-</table>
-
 ```js
 console.log(deque.back()); // 60
 ```
 
 ### .popFront()
 removes the front element in the queue. It uses a pointer to get the front element and only remove popped elements when reaching half size of the queue.
-
-<table>
-  <tr>
-    <th align="center">return</th>
-    <th align="center">runtime</th>
-  </tr>
-  <tr>
-    <td align="center">T</td>
-    <td align="center">O(n*log(n))</td>
-  </tr>
-</table>
 
 ```js
 console.log(deque.popFront()); // 10
@@ -191,17 +132,6 @@ console.log(deque.front()); // 20
 ### .popBack()
 removes the back element in the queue. It uses a pointer to get the back element and only remove popped elements when reaching half size of the queue.
 
-<table>
-  <tr>
-    <th align="center">return</th>
-    <th align="center">runtime</th>
-  </tr>
-  <tr>
-    <td align="center">T</td>
-    <td align="center">O(n*log(n))</td>
-  </tr>
-</table>
-
 ```js
 console.log(deque.popBack()); // 60
 console.log(deque.back()); // 50
@@ -210,17 +140,6 @@ console.log(deque.back()); // 50
 ### .isEmpty()
 checks if the queue is empty.
 
-<table>
-  <tr>
-    <th align="center">return</th>
-    <th align="center">runtime</th>
-  </tr>
-  <tr>
-    <td align="center">boolean</td>
-    <td align="center">O(1)</td>
-  </tr>
-</table>
-
 ```js
 console.log(deque.isEmpty()); // false
 ```
@@ -228,34 +147,12 @@ console.log(deque.isEmpty()); // false
 ### .size()
 returns the number of elements in the queue.
 
-<table>
-  <tr>
-    <th align="center">return</th>
-    <th align="center">runtime</th>
-  </tr>
-  <tr>
-    <td align="center">number</td>
-    <td align="center">O(1)</td>
-  </tr>
-</table>
-
 ```js
 console.log(deque.size()); // 4
 ```
 
 ### .clone() 
 creates a shallow copy of the queue.
-
-<table>
-  <tr>
-    <th align="center">return</th>
-    <th align="center">runtime</th>
-  </tr>
-  <tr>
-    <td align="center">Deque&lt;T&gt;</td>
-    <td align="center">O(n)</td>
-  </tr>
-</table>
 
 ```js
 const deque2 = Deque.fromArray([{ id: 2 }, { id: 4 } , { id: 8 }]);
@@ -270,32 +167,12 @@ console.log(clone.front()); // { id: 4 }
 ### .toArray() 
 returns a copy of the remaining elements as an array.
 
-<table>
-  <tr>
-    <th align="center">return</th>
-    <th align="center">runtime</th>
-  </tr>
-  <tr>
-    <td align="center">T[]</td>
-    <td align="center">O(n)</td>
-  </tr>
-</table>
-
 ```js
 console.log(deque.toArray()); // [ 20, 30, 40, 50 ]
 ```
 
 ### .clear()
 clears all elements from the queue.
-
-<table>
- <tr>
-  <th>runtime</th>
- </tr>
- <tr>
-  <td>O(1)</td>
- </tr>
-</table>
 
 ```js
 deque.clear();
