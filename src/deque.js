@@ -20,7 +20,7 @@ class Deque {
   /**
    * Adds an element at the front of the queue
    * @public
-   * @param {any} element
+   * @param {number|string|object} element
    */
   pushFront(element) {
     this._frontElements.push(element);
@@ -30,7 +30,7 @@ class Deque {
   /**
    * Adds an element at the back of the queue
    * @public
-   * @param {any} element
+   * @param {number|string|object} element
    */
   pushBack(element) {
     this._backElements.push(element);
@@ -40,7 +40,7 @@ class Deque {
   /**
    * Dequeues the front element in the queue
    * @public
-   * @returns {any}
+   * @returns {number|string|object}
    */
   popFront() {
     if (this.size() === 0) {
@@ -71,7 +71,7 @@ class Deque {
   /**
    * Dequeues the back element of the queue
    * @public
-   * @returns {any}
+   * @returns {number|string|object}
    */
   popBack() {
     if (this.size() === 0) {
@@ -101,7 +101,7 @@ class Deque {
   /**
    * Returns the front element of the queue
    * @public
-   * @returns {any}
+   * @returns {number|string|object}
    */
   front() {
     if (this.size() === 0) {
@@ -118,7 +118,7 @@ class Deque {
   /**
    * Returns the back element of the queue
    * @public
-   * @returns {any}
+   * @returns {number|string|object}
    */
   back() {
     if (this.size() === 0) {
