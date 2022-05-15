@@ -68,7 +68,7 @@ const deque = new Deque<number>();
 const deque = new Deque<number>([1, 2, 3]);
 ```
 
-### Deque.fromArray(elements)
+### Deque.fromArray
 
 ##### JS
 ```js
@@ -93,35 +93,35 @@ const list = [10, 3, 8, 40, 1];
 const deque = Deque.fromArray<number>(list);
 ```
 
-### .pushFront(element)
+### pushFront
 adds an element at the front of the queue.
 
 ```js
 deque.pushFront(30).pushFront(20).pushFront(10);
 ```
 
-### .pushBack(element)
+### pushBack
 adds an element at the back of the queue.
 
 ```js
 deque.pushBack(40).pushBack(50).pushBack(60);
 ```
 
-### .front()
+### front
 peeks on the front element of the queue.
 
 ```js
 console.log(deque.front()); // 10
 ```
 
-### .back()
+### back
 peeks on the back element of the queue.
 
 ```js
 console.log(deque.back()); // 60
 ```
 
-### .popFront()
+### popFront
 removes the front element in the queue. It uses a pointer to get the front element and only remove popped elements when reaching half size of the queue.
 
 ```js
@@ -129,7 +129,7 @@ console.log(deque.popFront()); // 10
 console.log(deque.front()); // 20
 ```
 
-### .popBack()
+### popBack
 removes the back element in the queue. It uses a pointer to get the back element and only remove popped elements when reaching half size of the queue.
 
 ```js
@@ -137,21 +137,21 @@ console.log(deque.popBack()); // 60
 console.log(deque.back()); // 50
 ```
 
-### .isEmpty()
+### isEmpty
 checks if the queue is empty.
 
 ```js
 console.log(deque.isEmpty()); // false
 ```
 
-### .size()
+### size
 returns the number of elements in the queue.
 
 ```js
 console.log(deque.size()); // 4
 ```
 
-### .clone() 
+### clone
 creates a shallow copy of the queue.
 
 ```js
@@ -164,14 +164,14 @@ console.log(deque2.front()); // { id: 2 }
 console.log(clone.front()); // { id: 4 }
 ```
 
-### .toArray() 
+### toArray
 returns a copy of the remaining elements as an array.
 
 ```js
 console.log(deque.toArray()); // [ 20, 30, 40, 50 ]
 ```
 
-### .clear()
+### clear
 clears all elements from the queue.
 
 ```js
