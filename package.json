@@ -1,6 +1,6 @@
 {
   "name": "@datastructures-js/deque",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A performant double-ended queue (deque) implementation in javascript.",
   "main": "index.js",
   "directories": {
