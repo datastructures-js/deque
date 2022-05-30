@@ -122,7 +122,7 @@ console.log(deque.back()); // 60
 ```
 
 ### popFront
-removes the front element in the queue. It uses a pointer to get the front element and only remove popped elements when reaching half size of the queue.
+removes and returns the front element in the queue.
 
 ```js
 console.log(deque.popFront()); // 10
@@ -130,7 +130,7 @@ console.log(deque.front()); // 20
 ```
 
 ### popBack
-removes the back element in the queue. It uses a pointer to get the back element and only remove popped elements when reaching half size of the queue.
+removes and returns the back element in the queue.
 
 ```js
 console.log(deque.popBack()); // 60
