@@ -88,6 +88,11 @@ describe('Deque unit tests', () => {
     it('should convert the deque into an array', () => {
       expect(deque.toArray()).to.deep.equal([2, 3, 4, 5]);
     });
+
+    it('should convert a deque with single array element', () => {
+      const dq = new Deque([1]);
+      expect(dq.toArray()).to.deep.equal([1]);
+    });
   });
 
   describe('popFront/popBack', () => {

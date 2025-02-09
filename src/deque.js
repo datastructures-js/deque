@@ -159,7 +159,7 @@ class Deque {
    */
   toArray() {
     const backElements = this._backElements.slice(this._backOffset);
-    const frontElements = this._frontElements.slice(this._frontElements);
+    const frontElements = this._frontElements.slice(this._frontOffset);
     return frontElements.reverse().concat(backElements);
   }
 
