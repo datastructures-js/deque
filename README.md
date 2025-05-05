@@ -183,6 +183,8 @@ console.log(clone.front()); // { id: 4 }
 ```
 
 ### toArray
+O(n)
+
 returns a copy of the remaining elements as an array.
 
 ```js
@@ -190,6 +192,8 @@ console.log(deque.toArray()); // [ 20, 30, 40, 50 ]
 ```
 
 ### clear
+O(1)
+
 clears all elements from the queue.
 
 ```js
