@@ -1,10 +1,10 @@
 export class Deque<T> {
   constructor(elements?: T[]);
-  pushFront(element: T): Deque<T> | null;
-  pushBack(element: T): Deque<T> | null;
+  pushFront(element: T): Deque<T>;
+  pushBack(element: T): Deque<T>;
   popFront(): T | null;
   popBack(): T | null;
-  front(): T;
+  front(): T | null;
   back(): T | null;
   toArray(): T[];
   isEmpty(): boolean;
